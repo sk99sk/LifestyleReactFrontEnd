@@ -10,7 +10,7 @@ export default function Footer() {
               <p className="text-muted">LifeStyle.com </p>
             </div>
             <div className="col-md-2">
-              <a href="http://localhost:8080/SpringMVCHibernate/products" className="text-muted">Admin</a>
+              {/* <a href="http://localhost:8080/SpringMVCHibernate/products" className="text-muted">Admin</a> */}
             </div>
             <div className="col-md-8 text-md-center">
               <span className="px-2">info@lifestyle.com</span>
