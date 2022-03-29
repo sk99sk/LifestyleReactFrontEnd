@@ -2,26 +2,65 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div>
-      <footer className="section-footer border-top">
-        <div className="container">
-          <section className="footer-bottom border-top row">
-            <div className="col-md-2">
-              <p className="text-muted">LifeStyle.com </p>
+    <div class="footer-dark">
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+              <h3>Services</h3>
+              <ul>
+                <li>
+                  <a href="#">Business</a>
+                </li>
+                <li>
+                  <a href="#">Replacement</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+              </ul>
             </div>
-            <div className="col-md-2">
-              {/* <a href="http://localhost:8080/SpringMVCHibernate/products" className="text-muted">Admin</a> */}
+            <div class="col-sm-6 col-md-3 item">
+              <h3>About</h3>
+              <ul>
+                <li>
+                  <a href="#">Company</a>
+                </li>
+                <li>
+                  <a href="#">Team</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+              </ul>
             </div>
-            <div className="col-md-8 text-md-center">
-              <span className="px-2">info@lifestyle.com</span>
-              <span className="px-2">Banglore,India</span>
+            <div class="col-md-6 item text">
+              <h3>Company Name</h3>
+              <p>
+                Redefine Your Style Statement With Trendy Apparel, Footwear,
+                Accessories & More. Shoppable Looks From India's Top Influencers
+                At Myntra Studio. Shop Now. Latest Trends. 3000+ Brands. 30 Days
+                Return. 100% Original Brands. Photo Search. COD available.
+              </p>
             </div>
-            <div className="col-md-2 text-right text-muted">
-              <i className="fab fa-lg fa-cc-visa"></i>
-              <i className="fab fa-lg fa-cc-paypal"></i>
-              <i className="fab fa-lg fa-cc-mastercard"></i>
+            <br></br>
+            <br></br>
+            <div class="col item social">
+              <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-snapchat"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
             </div>
-          </section>
+          </div>
+          <p class="copyright">Company Name © 2022</p>
         </div>
       </footer>
     </div>
