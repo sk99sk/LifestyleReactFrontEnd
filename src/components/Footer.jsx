@@ -1,66 +1,67 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div class="footer-dark">
+    <div className="footer-dark">
       <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-3 item">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6 col-md-3 item">
               <h3>Services</h3>
               <ul>
                 <li>
-                  <a href="#">Business</a>
+                  <Link to="#">Business</Link>
                 </li>
                 <li>
-                  <a href="#">Replacement</a>
+                  <Link to="#">Replacement</Link>
                 </li>
                 <li>
-                  <a href="#">Support</a>
+                  <Link to="#">Support</Link>
                 </li>
               </ul>
             </div>
-            <div class="col-sm-6 col-md-3 item">
+            <div className="col-sm-6 col-md-3 item">
               <h3>About</h3>
               <ul>
                 <li>
-                  <a href="#">Company</a>
+                  <Link to="#">Company</Link>
                 </li>
                 <li>
-                  <a href="#">Team</a>
+                  <Link to="#">Team</Link>
                 </li>
                 <li>
-                  <a href="#">Careers</a>
+                  <Link to="#">Careers</Link>
                 </li>
               </ul>
             </div>
-            <div class="col-md-6 item text">
+            <div className="col-md-6 item text">
               <h3>Company Name</h3>
               <p>
                 Redefine Your Style Statement With Trendy Apparel, Footwear,
                 Accessories & More. Shoppable Looks From India's Top Influencers
-                At Myntra Studio. Shop Now. Latest Trends. 3000+ Brands. 30 Days
+                At LifeStyle Studio. Shop Now. Latest Trends. 3000+ Brands. 30 Days
                 Return. 100% Original Brands. Photo Search. COD available.
               </p>
             </div>
             <br></br>
             <br></br>
-            <div class="col item social">
-              <a href="#">
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-snapchat"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
+            <div className="col item social">
+              <Link to="#">
+                <i className="fa-brands fa-facebook"></i>
+              </Link>
+              <Link to="#">
+                <i className="fa-brands fa-twitter"></i>
+              </Link>
+              <Link to="#">
+                <i className="fa-brands fa-snapchat"></i>
+              </Link>
+              <Link to="#">
+                <i className="fa-brands fa-instagram"></i>
+              </Link>
             </div>
           </div>
-          <p class="copyright">Company Name © 2022</p>
+          <p className="copyright">LifeStyle © 2022</p>
         </div>
       </footer>
     </div>

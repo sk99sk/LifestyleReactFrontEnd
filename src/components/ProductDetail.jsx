@@ -6,17 +6,17 @@ export default function ProductDetail(props) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [cookies, setCookie, removeCookie] = useCookies(["cartItems","total"]);
+  const [cookies, setCookie, removeCookie] = useCookies(["cartItems", "total"]);
   const { id } = useParams();
   let navigate = useNavigate();
- const {token,setToken} = props.Token;
+  const { token, setToken } = props.Token;
   useEffect(() => {
     const url = `http://localhost:8080/SpringMVCHibernate/products-json`;
 
     fetch(url)
       .then((data) => data.json())
       .then((parsedData) => parsedData.productList)
-      .then((products) => products.find((x) => (x.id == id)))
+      .then((products) => products.find((x) => x.id == id))
       .then((product) => {
         setName(product.name);
         setDescription(product.description);
@@ -26,16 +26,19 @@ export default function ProductDetail(props) {
 
   const handleAddToCart = () => {
 
+    if(!token){
+      navigate("/cart");
+    }
     let cartItems = cookies.cartItems;
     let total = cookies.total;
-    if(total==null||total==undefined){
+    if (total == null || total == undefined) {
       total = 0;
     }
     total = parseInt(total);
     if (cartItems == null || cartItems == undefined) {
       cartItems = {};
     }
-   
+
     if (undefined == cartItems[id]) {
       cartItems[id] = 1;
     } else {
@@ -47,11 +50,29 @@ export default function ProductDetail(props) {
     setCookie("cartItems", cartItems, { path: "/" });
 
     total = total + price;
-    setCookie('total',total,{ path: "/" });
-    navigate("/cart");
+    setCookie("total", total, { path: "/" });
+    document.getElementById("productToCart").style.display = "block";
+    setTimeout( function() { document.getElementById("productToCart").style.display = "none"; }, 3000);
+    // navigate("/cart");
   };
   return (
     <div>
+      <div
+        style={{ display: "none" }}
+        className="alert alert-success alert-dismissible fade show"
+        role="alert"
+        id="productToCart"
+      >
+        Product Added to Cart
+        <button
+          type="button"
+          className="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <div className="container">
         <div
           style={{

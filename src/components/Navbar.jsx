@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import useToken from "../useToken";
 import { useNavigate } from "react-router-dom";
+
 
 export default function Navbar(props) {
   const { setToken,token } = props.Token;
@@ -53,11 +53,13 @@ export default function Navbar(props) {
             className="widget-header pl-3 ml-3"
           >
             <div
-              className="icon icon-sm rounded-circle border "
+              className="icon icon-sm rounded-circle"
               style={{ marginRight: "5px" }}
             >
               <i className="fa fa-shopping-cart"></i>
+              
             </div>
+            
           </Link>
         </div>
       </nav>
@@ -112,7 +114,7 @@ export default function Navbar(props) {
             className="widget-header pl-3 ml-3"
           >
             <div
-              className="icon icon-sm rounded-circle border "
+              className="icon icon-sm rounded-circle"
               style={{ marginRight: "5px" }}
             >
               <i className="fa fa-shopping-cart"></i>
